@@ -1,68 +1,53 @@
-/* Стилизация кнопки */
-:root {
-    --primary-color: #4263EB;
-    --primary-color-hover: #2342C0;
-    --secondary-color: #7048E8;
-    --secondary-color-hover: #5028C6;
-    --border_alternate: #ACB5BD;
-    --border_alternate_hover: #212429;
-    --white: #ffffff;
-    --black: #212429;
-}
+@import "../../assets/css/main.css";
 
-button {
+/* Стилизация кнопки */
+
+.button {
     border-radius: 8px;
     width: 189px;
     height: 48px;
     border: none;
     transition: opacity 500ms ease-in-out, background-color 500ms ease-in-out;
     color: var(--white);
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 8px;
 }
 
 .button_primary {
-    background-color: var(--primary-color);
+    background-color: var(--blue-1);
 }
 
 .button_primary:hover {
-    background-color: var(--primary-color-hover);
-    cursor: pointer;
+    background-color: var(--blue-2);
 }
 
-.button_primary + .button_primary:hover {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
 
 .button_secondary {
-    background-color: var(--secondary-color);
+    background-color: var(--purple);
 }
 
 .button_secondary:hover {
-    background-color: var(--secondary-color-hover);
-    cursor: pointer;
+    background-color: var(--purple-1);
 }
 
-.button_secondary + .button_secondary:hover {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
 
 .button_alternate {
     background-color: var(--white);
     color: var(--black);
-    border: 1px solid var(--border_alternate);
-    box-sizing: border-box;
-    border-radius: 8px;
+    border: 1px solid var(--grey-3);
 }
 
 .button_alternate:hover {
-    border: 1px solid var(--border_alternate_hover);
-    box-sizing: border-box;
-    border-radius: 8px;
-    cursor: pointer;
+    border: 1px solid var(--black);
 }
 
-.button_alternate + .button_alternate:hover {
+.button_disabled:hover {
     opacity: 0.5;
-    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.button[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
 }
