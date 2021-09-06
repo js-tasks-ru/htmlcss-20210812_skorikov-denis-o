@@ -22,3 +22,9 @@
 * {
     font-family: 'Roboto', sans-serif;
 }
+
+.page__box {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+}
